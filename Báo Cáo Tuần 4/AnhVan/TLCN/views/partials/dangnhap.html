@@ -1,0 +1,58 @@
+<aside class="main-sidebar " style="background-color: #1a2226;height: 900px;">
+  <!-- sidebar: style can be found in sidebar.less -->
+  <section class="sidebar">
+    <!-- Sidebar user panel -->
+    <!-- search form -->
+    <!-- /.search form -->
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu" style="margin-top: -50px">
+      <li class="header">MAIN NAVIGATION</li>
+      <li class="active treeview">
+        <a ><i class="fa fa-user"></i> <span>Register/Login</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+        <ul class="treeview-menu">
+          <li >
+            <a href="#/dangky"><i class="fa fa-circle-o"></i> Register</a>
+          </li>
+          <li class="active">
+            <a href="#/dangnhap"><i class="fa fa-circle-o"></i> Login </a>
+          </li>
+        </ul>
+      </li>
+
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </section>
+  <!-- /.sidebar -->
+</aside>
+<div class="login-box" style="height:420px">
+  <!-- /.login-logo -->
+  <div class="login-box-body" ng-controller="ctrl_dangnhap">
+    <p class="login-box-msg">Sign in to start your session</p>
+    <form >
+      <div class="form-group has-feedback">
+        <input type="text" class="form-control" placeholder="Username" ng-model="name1">
+        <span class="glyphicon fa fa-user form-control-feedback" ></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" class="form-control" placeholder="Password" ng-model="pass1">
+        <span class="glyphicon glyphicon-lock form-control-feedback" ></span>
+      </div>
+      <div class="row">
+        <div class="col-xs-8">
+
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-4">
+          <button type="submit" class="btn btn-primary btn-block btn-flat" ng-click="dangnhap()">Sign In</button>
+        </div>
+        <!-- /.col -->
+      </div>
+    </form>
+
+    <!-- /.social-auth-links -->
+
+  </div>
+  <!-- /.login-box-body -->
+</div>

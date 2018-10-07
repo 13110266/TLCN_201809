@@ -1,0 +1,107 @@
+<aside class="main-sidebar " style="background-color: #1a2226;height: 900px;">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <!-- search form -->
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" style="margin-top: -50px">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="active treeview">
+                <a ><i class="fa fa-user"></i> <span>Register/Login</span><span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span></a>
+                <ul class="treeview-menu">
+                    <li class="active">
+                        <a href="#/dangky"><i class="fa fa-circle-o"></i> Register</a>
+                    </li>
+                    <li>
+                        <a href="#/dangnhap"><i class="fa fa-circle-o"></i> Login </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
+<div class="register-box" style="height:420px" >
+
+    <div class="register-box-body" ng-controller="myCtrl">
+        <p class="login-box-msg">Register a new membership</p>
+        <form name="formdk">
+
+            <div class="form-group has-feedback">
+                <input name="ho" type="text" class="form-control" placeholder="Username" ng-model="name1" required>
+                <span class="glyphicon glyphicon-user form-control-feedback"></span>
+                <span   ng-show="formdk.ho.$touched && formdk.ho.$invalid">Username la bat buoc</span>
+            </div>
+
+            <div class="form-group has-feedback">
+                <input name="pass" type="password" class="form-control" placeholder="Password" ng-model="pass1" required>
+                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                <span   ng-show="formdk.pass.$touched && formdk.pass.$invalid">Ban chua nhap password</span>
+            </div>
+
+            <div class="form-group has-feedback">
+                <input name="mail" type="email" class="form-control" placeholder="Email" ng-model="email1" required>
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                <span   ng-show="formdk.mail.$touched && formdk.mail.$invalid">Email phai co @</span>
+            </div>
+
+            <div class="form-group has-feedback">
+                <input name="add" type="text" class="form-control" placeholder="Address" ng-model="address1" required>
+                <span class="glyphicon ace-icon fa fa-home form-control-feedback"></span>
+                <span   ng-show="formdk.add.$touched && formdk.add.$invalid">Ban chua nhap address</span>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-8">
+                    <div class="checkbox icheck">
+                        <label>
+
+                        </label>
+                    </div>
+                </div>
+                <!-- /.col -->
+                <div class="col-xs-4">
+                    <button type="submit" ng-disabled="formdk.$invalid" class="btn btn-primary btn-block btn-flat" ng-click="submit()">Register</button>
+                </div>
+                <!-- /.col -->
+            </div>
+        </form>
+    </div>
+    <!-- /.form-box -->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

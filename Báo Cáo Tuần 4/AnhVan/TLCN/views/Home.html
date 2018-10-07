@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title>Toeic</title>
+  <!--
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.min.js"></script>
+  <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-cookies.js"></script>
+  -->
+  <script src = "assets/angularjs/1.3.14/angular.min.js"></script>
+  <script src = "assets/angularjs/1.3.14/angular-route.min.js"></script>
+  <script src = "assets/angularjs/1.3.14/angular-cookies.js"></script>
+
+  <script src = "js/app.js"></script>
+  <script src = "js/controller/DangkyController.js"></script>
+  <script src = "js/controller/DangNhapController.js"></script>
+  <script src = "js/controller/AdminController.js"></script>
+<script src = "js/controller/aboutController.js"></script>
+  
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <link rel="stylesheet" href="assets/dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="assets/dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="assets/plugins/iCheck/flat/blue.css">
+  <link rel="stylesheet" href="assets/plugins/morris/morris.css">
+  <link rel="stylesheet" href="assets/plugins/jvectormap/jquery-jvectormap-1.2.2.css">
+  <link rel="stylesheet" href="assets/plugins/datepicker/datepicker3.css">
+  <link rel="stylesheet" href="assets/plugins/daterangepicker/daterangepicker.css">
+  <link rel="stylesheet" href="assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+</head>
+
+<body ng-app = "mainApp" class="hold-transition skin-green sidebar-mini">
+<div class="wrapper">
+<header class="main-header">
+  <a  class="logo">
+    <span class="logo-mini"><b>T</b>600</span>
+    <span class="logo-lg"><b>TOEIC</b> 750</span>
+  </a>
+  <nav class="navbar navbar-static-top">
+    <a  class="sidebar-toggle" data-toggle="offcanvas" role="button">
+      <span class="sr-only">Toggle navigation</span>
+    </a>
+    <div class="navbar-custom-menu" ng-model="state" ng-controller="ctrl_Header">
+      <ul class="nav navbar-nav">
+        <li class="dropdown user user-menu" ng-show="state">
+          <a  class="dropdown-toggle" data-toggle="dropdown">
+            <img src="assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+            <span class="hidden-xs">Hello {{username}}</span>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="user-header">
+              <img src="assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+              <p>
+              {{username}}
+              </p>
+            </li>
+            <li class="user-footer">
+              <div class="pull-left">
+                <a href="#" class="btn btn-default btn-flat">Profile</a>
+              </div>
+              <div class="pull-right">
+                <a  ng-click="logout()" class="btn btn-default btn-flat">Sign out</a>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+  <div ng-view class="wrapper">
+
+
+  </div>
+
+</div>
+<script src="assets/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+<script>$.widget.bridge('uibutton', $.ui.button)</script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="assets/plugins/morris/morris.min.js"></script>
+<script src="assets/plugins/sparkline/jquery.sparkline.min.js"></script>
+<script src="assets/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="assets/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="assets/plugins/knob/jquery.knob.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+<script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
+<script src="assets/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script src="assets/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="assets/plugins/fastclick/fastclick.js"></script>
+<script src="assets/dist/js/app.min.js"></script>
+<script src="assets/dist/js/pages/dashboard.js"></script>
+<script src="assets/dist/js/demo.js"></script>
+</body>
+</html>

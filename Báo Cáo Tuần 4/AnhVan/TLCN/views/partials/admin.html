@@ -1,0 +1,137 @@
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar" style="background-color: #1a2226;height: 900px;" ng-controller="ctrl_Header">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <ul class="sidebar-menu" style="margin-top: -50px">
+            <li class="header">MAIN NAVIGATION</li>
+            <li class="active treeview">
+                <a><i class="fa fa-user"></i> <span>Register/Login</span><span class="pull-right-container"><i
+                        class="fa fa-angle-left pull-right"></i></span></a>
+                <ul class="treeview-menu">
+                    <li class="active">
+                        <a href="#/dangky"><i class="fa fa-circle-o"></i>Register</a>
+                    </li>
+                    <li>
+                        <a href="#/dangnhap"><i class="fa fa-circle-o"></i> Login </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#/about"><i class="fa fa-book"></i> <span>Topic</span></a>
+
+            </li>
+            <li>
+                <a href="#/admin"><i class="fa fa-book"></i> <span>Admin</span></a>
+            </li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" ng-controller="myadmin" >
+    <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Table User</h3>
+
+            <div class="box-tools">
+                <div class="input-group input-group-sm" >
+                </div>
+            </div>
+        </div>
+        <!-- /.box-header -->
+        <div class="box-body table-responsive no-padding">
+            <table class="table table-hover"  >
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Password</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <div id="container">
+                        <div class="row" >
+
+                            <tr ng-repeat="data in profile_pictures">
+                                <td> {{data.idUser}}</td>
+                                <td> {{data.name}}</td>
+                                <td> {{data.pass}}</td>
+                                <td> {{data.email}}</td>
+                                <td> {{data.address}}</td>
+                                <td><button type="button" class="btn btn-info fa fa-edit" ng-click="update(data)"></button><button type="button" class="btn btn-danger fa fa-close" ng-click="delete($index,data)" ></button></td>
+                            </tr>
+                        </div>
+                    </div>
+                </tr>
+            </table>
+        </div>
+        <!-- /.box-body -->
+    </div>
+    <div class="box box-info" >
+        <div class="box-header with-border">
+            <h3 class="box-title">Table User</h3><img class="img-responsive" >
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" name="formdk" style="height: 500px;">
+            <div class="box-body">
+                <div class="form-group" ng-hide="true">
+                    <label for="inputEmail3" ng-model="ID" class="col-sm-2 control-label">ID</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="ID">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Username</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" name="ho" class="form-control" placeholder="Username" ng-model="name2" required>
+                        <span   ng-show="formdk.ho.$touched && formdk.ho.$invalid">Username la bat buoc</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 control-label">Password</label>
+
+                    <div class="col-sm-10">
+                        <input type="password" name="pass" class="form-control" placeholder="Password" ng-model="pass2" required>
+                        <span   ng-show="formdk.pass.$touched && formdk.pass.$invalid">Ban chua nhap password</span>
+                    </div>
+                </div>
+                <div class="form-group">`
+                    <label class="col-sm-2 control-label">Email</label>
+
+                    <div class="col-sm-10">
+                        <input type="email" name="mail" class="form-control" placeholder="Email" ng-model="email2" required>
+                        <span   ng-show="formdk.mail.$touched && formdk.mail.$invalid">Email phai co @</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label  class="col-sm-2 control-label">Address</label>
+
+                    <div class="col-sm-10">
+                        <input type="text" name="add" class="form-control" placeholder="Adress" ng-model="address2" required>
+                        <span   ng-show="formdk.add.$touched && formdk.add.$invalid">Ban chua nhap address</span>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <!--    <button type="submit" class="btn btn-default">Cancel</button> -->
+                <td><button type="button" class="btn btn-info fa fa-cog" ng-click="submitupdate()"></button><button type="submit" ng-disabled="formdk.$invalid" class="btn btn-info pull-right" ng-click="submit()">Add</button>
+            </div>
+            <!-- /.box-footer -->
+        </form>
+    </div>
+
+    <!-- Main content -->
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+
+<!-- Control Sidebar -->
