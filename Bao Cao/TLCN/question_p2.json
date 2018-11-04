@@ -1,0 +1,21 @@
+﻿{
+    "_id" : ObjectId(),
+    "question" : "2",
+    "listenfile" : "1.mp3",
+    "answer" : "A",
+    "topic" : "1"
+}
+{
+   "_id" : ObjectId(),
+    "question" : "3",
+    "listenfile" : "1.mp3",
+    "answer" : "A",
+    "topic" : "1"
+}
+{
+    "_id" : ObjectId(),
+    "question" : "2",
+    "listenfile" : "1.mp3",
+    "answer" : "A",
+    "topic" : "2"
+}

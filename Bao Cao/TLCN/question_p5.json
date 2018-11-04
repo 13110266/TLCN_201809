@@ -1,0 +1,33 @@
+﻿{
+    "_id" : ObjectId(),
+    "question" : "10",
+    "context" : "The two sides were no closer to a final ... at midnight than they were at noon.",
+    "A" : "agreement",
+    "B" : "agreeable",
+    "C" : "agree",
+    "D" : "agreed",
+    "answer" : "A",
+    "topic" : "1"
+}
+{
+    "_id" : ObjectId(),
+    "question" : "11",
+    "context" : "Our union representative ... members that our right would ba defended.",
+    "A" : "assured",
+    "B" : "assurance",
+    "C" : "assuredly",
+    "D" : "assure",
+    "answer" : "A",
+    "topic" : "1"
+}
+{
+    "_id" : ObjectId(),
+    "question" : "12",
+    "context" : "If you ... your reservation 48 hours in advance, you not be billed.",
+    "A" : "will cancel",
+    "B" : "cancel",
+    "C" : "cancellation",
+    "D" : "canceled",
+    "answer" : "B",
+    "topic" : "1"
+}

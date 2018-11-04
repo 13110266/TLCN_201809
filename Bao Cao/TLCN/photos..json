@@ -1,0 +1,20 @@
+﻿{
+    "_id" : ObjectId(),
+    "photo" : "p71.png",
+    "topic" : "1"
+}
+{
+    "_id" : ObjectId(),
+    "photo" : "p72.png",
+    "topic" : "2"
+}
+{
+    "_id" : ObjectId(),
+    "photo" : "p73.png",
+    "topic" : "3"
+}
+{
+    "_id" : ObjectId(),
+    "photo" : "p74.png",
+    "topic" : "4"
+}

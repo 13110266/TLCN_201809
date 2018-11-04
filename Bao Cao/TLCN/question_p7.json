@@ -1,0 +1,34 @@
+﻿{
+    "_id" : ObjectId(),
+    "question" : "19",
+    "context" : "What is the purpose of the letter?",
+    "photo" : "p71.png",
+    "A" : "To find out why Mr.Harrison no longer wwants this service.",
+    "B" : "To ask Mr.Harrson to renew his contract.",
+    "C" : "To advertise provided by the company.",
+    "D" : "To advertise provided by the company. ",
+    "answer" : "A",
+    "topic" : "1"
+}
+{
+    "_id" : ObjectId(),
+    "question" : "20",
+    "context" : "What is Ms.Santos's business?",
+    "A" : "Customer relations",
+    "B" : "Cleaning service",
+    "C" : "Contract review",
+    "D" : "Conflict resolution ",
+    "answer" : "B",
+    "topic" : "1"
+}
+{
+    "_id" : ObjectId(),
+    "question" : "21",
+    "context" : "Why did tis customer cancel the contract?",
+    "A" : "The company damaged something in his office",
+    "B" : "The employees provided unsatisfactory service.",
+    "C" : "He had a disagreement about his bill.",
+    "D" : "He doesn't want this type of service anymore.",
+    "answer" : "C",
+    "topic" : "1"
+}

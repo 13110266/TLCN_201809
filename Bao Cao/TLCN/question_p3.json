@@ -1,0 +1,36 @@
+﻿{
+    "_id" : ObjectId(),
+    "question" : "4",
+    "context" : "What problem do the speaker have with the computer company?",
+    "A" : "It won't renew the contract.",
+    "B" : "It can't repair the computer.",
+    "C" : "It sends incorrect bills.",
+    "D" : "It changes them for extra spare parts.",
+    "answer" : "C",
+    "topic" : "1",
+    "listenfile" : "1.mp3",
+}
+{
+    "_id" : ObjectId(),
+    "question" : "5",
+    "context" : "When will the contract run out?",
+    "A" : "In two months.",
+    "B" : "In nine months",
+    "C" : "In one year.",
+    "D" : "In four years.",
+    "answer" : "A",
+    "topic" : "1",
+     "listenfile" : "1.mp3",
+}
+{
+    "_id" : ObjectId(),
+    "question" : "6",
+    "context" : "What does the women suggest doing?",
+    "A" : "Asking the company to write a new contract. ",
+    "B" : "Canceling the contract.",
+    "C" : "Renewing the contract.",
+    "D" : "Waiting the contract run out.",
+    "answer" : "D",
+    "topic" : "1",
+    "listenfile" : "1.mp3",
+}

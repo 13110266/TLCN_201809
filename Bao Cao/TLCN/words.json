@@ -1,0 +1,36 @@
+﻿{
+    "_id" : ObjectId(),
+    "word" : "agreement",
+    "ten" : "CONTRACTS",
+    "mean" : "thỏa thuận",
+    "context_w" : "The landlord and tenant were in agreement that the rent should be prorated to the middle of the month  ",
+    "photo" : "w102.jpg",
+    "topic" : "1",
+    "stt" : 2,
+    "doc" : "102.mp3",
+    "dn" : "The two countries signed an agreement to reduce their nuclear armouries"
+}
+{
+    "_id" : ObjectId(),
+    "word" : "assurance",
+    "mean" : "đảm bảo",
+    "ten" : "CONTRACTS",
+    "context_w" : "The sales associate gave his assurance that the missing keyboard would be replaced the next day.",
+    "photo" : "w103.jpg",
+    "topic" : "1",
+    "stt" : 3,
+    "doc" : "103.mp3",
+    "dn" : "Despite the government's repeated assurances to the contrary, taxation has risen over the past decade."
+}
+{
+    "_id" : ObjectId(),
+    "word" : "cancellation",
+    "mean" : "sựa hủy bỏ",
+    "ten" : "CONTRACTS",
+    "context_w" : "The cancellation of flight cause her problem for the rest of the week.",
+    "photo" : "w104.jpg",
+    "topic" : "1",
+    "stt" : 4,
+    "doc" : "104.mp3",
+    "dn" : "The act of deciding that an organized event will not happen or of stopping an order for something: Many trains are subject to cancellation because of the flooding."
+}

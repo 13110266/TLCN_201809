@@ -1,0 +1,24 @@
+﻿{
+    "_id" : ObjectId(),
+    "type" : "verb",
+    "word" : "agree",
+    "context" : "If both parties agree  to the terms, we can finalize the contract.",
+    "topic" : "1",
+    "id" : "1"
+}
+{
+    "_id" : ObjectId(),
+    "type" : "noun",
+    "word" : "agreement",
+    "context" : "As soon as the labor agreement was signed, the factory resumed production of new cars and vans.",
+    "topic" : "1",
+    "id" : "1"
+}
+{
+    "_id" : ObjectId(),
+    "type" : "adjective",
+    "word" : "agreeable",
+    "context" : "The parties are agreeable to the term.",
+    "topic" : "1",
+    "id" : "1"
+}

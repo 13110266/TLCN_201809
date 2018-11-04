@@ -1,0 +1,31 @@
+﻿{
+    "_id" : ObjectId(),
+    "question" : "16",
+    "context" : "More and more people are investing in rental prooperty these days. Whether you have a small apartmant in your house to rent, or decide to inver in an apartment or office building, rental property can provide extra income for you and your family. What does every landlord need to know? A lease is an ...16.. between a landlord and a tenant. Standard leases are available at most office supply stores, and many property owners fine them quite saticfactory. Read the satandard lease carefully to determine if it meets the needs of your situation. You may want to make some additional ..17.. You may want to add a pet clause, for exam-ple, or make different specifications pertaining to the security deposit. if you decide to make changes to the standard lease, you should meer with a lawyer. The lease is the most important tool you have if you need to resolve a dispute with your tenant. When you have a lease written by s lawyer, you ..18.. that you have the protection you need. ",
+    "A" : "agree",
+    "B" : "agreed",
+    "C" : "agreeable",
+    "D" : "agreement",
+    "answer" : "D",
+    "topic" : "1"
+}
+{
+    "_id" : ObjectId(),
+    "question" : "17",
+    "A" : "provision",
+    "B" : "provisions",
+    "C" : "provider",
+    "D" : "providers",
+    "answer" : "B",
+    "topic" : "1"
+}
+{
+    "_id" : ObjectId(),
+    "question" : "18",
+    "A" : "assure",
+    "B" : "will assure",
+    "C" : "are assuring",
+    "D" : "are assured",
+    "answer" : "D",
+    "topic" : "1"
+}
