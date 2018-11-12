@@ -1,0 +1,41 @@
+.table td, .table th {
+   text-align: center;
+   width: 25%;  
+}
+.box-left01{
+    width:150px
+}
+.bg{
+    height:530px;
+}
+
+/* Dành cho điện thoại */
+@media all and (min-width: 320px) {
+
+    .bg{
+ height: 900px;
+}
+   
+}
+ 
+/* Dành cho máy tính bảng chiều dọc */
+@media all and (min-width: 600px) {
+
+    .bg{
+ height: 1008px;
+
+}
+
+
+
+}
+
+/* Dành cho màn hình desktop */
+@media all and (min-width: 1280px) {
+    .bg{
+    height:700px;
+}
+}
+
+
+

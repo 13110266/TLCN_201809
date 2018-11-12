@@ -1,0 +1,42 @@
+.popover-content {
+    padding: 9px 14px;
+}
+
+
+
+.popover00 {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1060;
+
+    max-width: 276px;
+    padding: 1px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: normal;
+    font-weight: normal;
+    letter-spacing: normal;
+    line-break: auto;
+    line-height: 1.42857143;
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    white-space: normal;
+    word-break: normal;
+    word-spacing: normal;
+    word-wrap: normal;
+    font-size: 15px;
+   
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #cccccc;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  
+    margin-top: 39px;
+}

@@ -1,0 +1,78 @@
+<div class="content " style="background-image:url('../../assets/dist/images/demo/backgrounds/bg6.jpg');height:530px;">
+  <section class="hoc clear" >
+<app-toast [message]="toast.message"></app-toast>
+
+    <div class="login-box">
+      <!-- /.login-logo -->
+      <div class="login-box-body">
+        <h3 class="login-box-msg">Form Login</h3>
+
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="login-form form" novalidate>
+          <div class="form-group has-feedback">
+            <input #userEmail type="text" formControlName="email" placeholder="Email" class="form-control">
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+            <div [hidden]="email.valid || email.pristine" class="alert alert-danger">Please enter a valid email format</div>
+          
+          <div class="form-group has-feedback">
+            <input type="password" formControlName="password" placeholder="Password" class="form-control">
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            
+          </div>
+          <div [hidden]="password.valid || password.pristine" class="alert alert-danger">Password must contain 6 or more characters</div>
+            
+          <div class="row">
+            <div class="col-xs-8">
+          <div class="checkbox icheck">
+            <label class="">
+              <div class="icheckbox_square-blue" aria-checked="false" aria-disabled="false" style="position: relative;"><input type="checkbox" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"><ins class="iCheck-helper" style="position: absolute; top: -20%; left: -20%; display: block; width: 140%; height: 140%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins></div>
+            </label>
+          </div>
+        </div>
+            <!-- /.col -->
+            <div class="col-md-4">
+              <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary btn-block btn-flat">Sign In</button>
+            </div>
+            <!-- /.col -->
+          </div>
+        </form>
+        <a href="register" class="text-center">Register a new membership</a>
+      </div>
+      <!-- /.login-box-body -->
+    </div>
+
+
+<!--
+    <div class="box">
+      <div class="box-header with-border">
+        <h3 class="box-title">Form Login</h3>
+        <div class="box-tools pull-right">
+          <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
+              <i class="fa fa-minus"></i></button>
+        </div>
+      </div>
+      <div class="box-body">
+        <div class="container topPad col-xs-12">
+          <form [formGroup]="myForm" (ngSubmit)="onSubmit()" class="login-form form" novalidate>
+            <div class="input-group">
+              <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+              <input #userEmail type="text" formControlName="email" placeholder="Email" class="form-control">
+            </div>
+            <div [hidden]="email.valid || email.pristine" class="alert alert-danger">Please enter a valid email format</div>
+            <span class="help-block"></span>
+            <div class="input-group">
+              <span class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></span>
+              <input type="password" formControlName="password" placeholder="Password" class="form-control">
+            </div>
+            <div [hidden]="password.valid || password.pristine" class="alert alert-danger">Password must contain 6 or more characters</div>
+            <br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!myForm.valid">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+-->
+
+
+  </section>
+</div>

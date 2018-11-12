@@ -1,0 +1,63 @@
+<div class="content " class="bg">
+  <div class="hoc clear" style="padding-top:50px">
+
+
+
+
+
+
+
+    <div class="col-lg-10 col-xs-12">
+      <div class="col-md-12" *ngIf="a==false">
+        <h1>Không tìm thấy từ bạn tìm</h1>
+      </div>
+      <div class="col-md-12" *ngIf="a==true">
+        <div class="box box-default ">
+
+          <!-- /.box-header -->
+          <div class="box-body">
+            <div class="row">
+              <div class="col-md-4">
+
+                <img src="assets/dist/image/{{word?.photo}}" alt="Photo" style="height: 200px; width: 200px;" class="img-responsive">
+
+                <!-- ./chart-responsive -->
+              </div>
+              <!-- /.col -->
+              <div class="col-md-8">
+                <ul class="chart-legend clearfix">
+
+                  <li>
+                    <h4 style="color: #FF0000;"><b>{{word?.word}}</b></h4>
+                  </li>
+                  <li>
+                    <a style="color: #000000;">
+                      <audio src="assets/dist/Audio/{{word?.doc}}" controls></audio>
+                    </a>
+                  </li>
+                  <li><i class="fa fa-circle-o text-green"></i><b style="color: #000000;"> Mean: </b><a style="color: #000000;">{{word?.mean}}</a></li>
+
+                  <li><i class="fa fa-circle-o text-light-blue"></i><b style="color: #000000;"> Define: </b><a style="color: #000000;">{{word?.dn}}</a></li>
+                  <li><i class="fa fa-circle-o text-yellow"></i><b style="color: #000000;"> Example: </b><a style="color: #000000;">{{word?.context_w}}</a></li>
+
+                </ul>
+
+              </div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.box-body -->
+
+          <!-- /.footer -->
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+  </div>
+</div>

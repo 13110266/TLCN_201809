@@ -1,0 +1,116 @@
+<div class="bg">
+  <div class="card" *ngIf="isLoading">
+    <h4 class="card-header">Loading...</h4>
+    <div class="card-block text-xs-center">
+      <i class="fa fa-circle-o-notch fa-spin fa-3x"></i>
+    </div>
+  </div>
+
+  <app-toast [message]="toast.message"></app-toast>
+
+  <div class="hoc clear">
+    <h4 class="card-header">Current User ({{User.length}})</h4>
+    <div class="card-block">
+      <table class="table table-bordered table-striped">
+
+        <thead class="thead-default">
+          <tr>
+            <th>Name</th>
+            <th>Pass</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>Role</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="!isEditing">
+          <tr *ngFor="let user of pagedItems">
+            <td style="color: #000000;">{{user.username}}</td>
+            <td style="color: #000000;">{{user.password}}</td>
+            <td style="color: #000000;">{{user.email}}</td>
+            <td style="color: #000000;">{{user.address}}</td>
+            <td style="color: #000000;">{{user.role}}</td>
+            <td>
+              <button class="btn btn-sm btn-warning" (click)="enableEditing(user)"><i class="fa fa-pencil"></i> </button>
+              <button class="btn btn-sm btn-danger" (click)="deleteUser(user)"><i class="fa fa-trash"></i> </button>
+            </td>
+          </tr>
+        </tbody>
+        <tbody *ngIf="isEditing">
+          <tr>
+            <td colspan="6">
+              
+              <form class="form-inline" #form="ngForm" (ngSubmit)="editUser(user)" style="display:inline">
+                <div class="form-group" >
+                  <input class="form-control" type="text" name="username" [(ngModel)]="user.username" placeholder="Name" required>
+                </div>
+                <div class="form-group" >
+                  <input class="form-control" type="text" name="password" [(ngModel)]="user.password" placeholder="Pass" min="0" required>
+                </div>
+                <div class="form-group">
+                  <input class="form-control" type="text" name="email" [(ngModel)]="user.email" placeholder="Email" step="any" min="0" required>
+                </div>
+                <div class="form-group" >
+                  <input class="form-control" type="text" name="address" [(ngModel)]="user.address" placeholder="Address" step="any" min="0"
+                    required>
+                </div>
+                <div class="form-group" >
+                  <input class="form-control" type="text" name="role" [(ngModel)]="user.role" placeholder="Role" step="any" min="0"
+                    required>
+                </div>
+
+                <button class="btn btn-sm btn-primary" type="submit" [disabled]="!form.form.valid"><i class="fa fa-floppy-o"></i> </button>
+              
+              <button class="btn btn-sm btn-warning" (click)="cancelEditing()"><i class="fa fa-times"></i> </button>
+              </form>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <ul *ngIf="pager.pages && pager.pages.length" class="pagination">
+        <li [ngClass]="{disabled:pager.currentPage === 1}">
+          <a (click)="setPage(1)">First</a>
+        </li>
+        <li [ngClass]="{disabled:pager.currentPage === 1}">
+          <a (click)="setPage(pager.currentPage - 1)">Previous</a>
+        </li>
+        <li *ngFor="let page of pager.pages" [ngClass]="{active:pager.currentPage === page}">
+          <a (click)="setPage(page)">{{page}}</a>
+        </li>
+        <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+          <a (click)="setPage(pager.currentPage + 1)">Next</a>
+        </li>
+        <li [ngClass]="{disabled:pager.currentPage === pager.totalPages}">
+          <a (click)="setPage(pager.totalPages)">Last</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hoc clear" *ngIf="!isEditing">
+    <h4 class="card-header">Add new user</h4>
+    <div class="card-block">
+      <form class="form-inline" [formGroup]="addUserForm" (ngSubmit)="addUser()" style="text-align:center">
+        <div class="form-group">
+          <input class="form-control" type="text" name="username" formControlName="username" placeholder="Name">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" name="password" formControlName="password" placeholder="Pass" min="0">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" name="email" formControlName="email" placeholder="Email" step="any" min="0">
+        </div>
+        <div class="form-group">
+          <input class="form-control" type="text" name="address" formControlName="address" placeholder="Address" step="any" min="0">
+        </div>
+        <div class="form-group">
+          <select class="form-control" formControlName="role">
+  <option value="0">Admin</option>
+  <option value="1">UserRs</option>
+</select>
+         </div>
+        <button class="btn btn-primary" type="submit" [disabled]="!addUserForm.valid"><i class="fa fa-floppy-o"></i> Add</button>
+      </form>
+    </div>
+  </div>
+</div>

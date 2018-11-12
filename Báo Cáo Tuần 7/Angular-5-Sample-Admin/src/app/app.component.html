@@ -1,0 +1,106 @@
+<div class="bgded overlay" style="background-image:url('../assets/dist/images/demo/backgrounds/bg6.jpg');">
+  <header class="main-header" style="background-color: #000000;">
+    <app-toast [message]="toast.message"></app-toast>
+    <nav class="navbar navbar-static-top">
+      <div class="fl_left" style="padding-top:15px;">
+        <ul>
+          <li><i class="fa fa-phone"></i> + (84) 9694 39091
+            <i style="padding-left:15px;" class="fa fa-envelope-o"></i> toeic@gmail.com</li>
+        </ul>
+      </div>
+
+      <div class="navbar-custom-menu" ng-model="state" ng-controller="ctrl_Header">
+        <ul class="nav navbar-nav">
+          <li class="dropdown user user-menu" ng-show="state" *ngIf="islogin">
+            <a class="dropdown-toggle" data-toggle="dropdown">
+              <img src="assets/dist/images/abc.jpg" class="user-image" alt="UserRs Image">
+              <span style="color: #C7C300;" class="hidden-xs">Hello {{username}}</span>
+              <a (click)="logout()" class="fa fa-close"></a>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar-custom-menu" style="padding-top:15px;padding-right:50px">
+        <ul>
+          <li><a href="page"><i class="fa fa-lg fa-home"></i></a>
+            <a style="padding-left:15px;" href="login">Login</a>
+            <a style="padding-left:15px;" href="register">Register</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <header id="header" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div id="logo" class="fl_left">
+      <h1><a href="page"><b>SAGOTA</b></a></h1>
+    </div>
+    <div class="col-md-1">
+    </div>
+    <nav id="mainav" class="col-lg-8 col-xs-12">
+      <ul class="clear">
+        <li class="active"><a href="page" style="color: #C7C300;">HOME</a></li>
+        <li><a href="topic">TOPIC</a>
+
+        </li>
+        <li><a href="word/1">WORD</a></li>
+        <li><a href="word_form2/1">WORD FORM</a></li>
+        <li><a href="question/1">EXERCISE</a></li>
+
+        <li><a href="video">VIDEO</a></li>
+      </ul>
+
+      <form action="#">
+        <select (change)="go($event.target.value);" >
+        <option selected="selected"  value="">MENU</option>
+        <option value="topic" >Topic</option>
+        <option value="word/1">Word</option>
+        <option value="word_form2/1">Word Form</option>
+        <option value="question/1">Exercise</option>
+        <option value="video">Video</option>
+        </select>
+      </form>
+    </nav>
+
+    <div class="col-lg-4 col-xs-12">
+      <div class="fl_right" style="padding-top:12px">
+
+        <div class="box-body">
+          <!-- /btn-group -->
+          <div class="input-group">
+            <input id="new-event" type="text" value="{{term}}" #textsearch (keyup)="setvalue(textsearch.value)" class="form-control"
+              placeholder="Search">
+            <div class="popover-content popover00" style="height:200px;overflow-y: auto;width:300px" *ngIf="flag===true">
+
+              <ul class="list-group">
+                <li *ngFor="let item of allItems |search: term " class="list-group-item" style="color: #000000;">
+                  <a (click)="search(item.word)">  {{item.word}}</a>
+                </li>
+
+              </ul>
+
+            </div>
+            <div class="input-group-btn">
+              <button id="add-new-event" type="button" class="btn btn-primary btn-flat" (click)="search(textsearch.value)" style="background-color: rgb(0, 166, 90); border-color: rgb(0, 166, 90);">OK</button>
+            </div>
+            <!-- /btn-group -->
+          </div>
+          <!-- /input-group -->
+
+
+
+          <!-- /btn-group -->
+
+          <!-- /input-group -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ################################################################################################ -->
+  </header>
+
+
+
+
+  <router-outlet></router-outlet>
+
+</div>
